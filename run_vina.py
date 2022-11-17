@@ -36,7 +36,7 @@ z=-35.364
 Center =[x, y, z]
 Box_size=[22.5, 22.5, 22.5]
 Exhaustiveness = 32
-N_poses = 9
+N_poses = 25
 Campo_fuerzas = 'vina'      #Si se desea usar otro campo de fuerzas como ad4 o vinardo cambiar la palabra vina por el campo deseado
 output_file = Outputs +'/output_file.txt'
 readme_file = Outputs + '/readme_file.txt'
@@ -105,7 +105,7 @@ for rep in range(100):
 					# Docking del ligando
 					v.dock(exhaustiveness= Exhaustiveness, n_poses= N_poses)
 					# Escritura la pose
-					v.write_poses(pdbqt_filename= Outputs+"/out_"+f"repe_{rep}+ligando  ", n_poses=9, overwrite=True)
+					v.write_poses(pdbqt_filename= Outputs+"/out_"+f"repe_{rep}+ligando  ", n_poses=25, overwrite=True)
 					# Escritura output pose-score
 					energies = v.energies()
 					score = energies[0,0]
